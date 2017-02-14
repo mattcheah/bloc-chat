@@ -1,0 +1,32 @@
+* {
+    color:white;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: 
+		/*thin stripes*/
+		linear-gradient(
+			45deg, 
+			transparent 45%, 
+			rgba(0, 0, 0, 0.2) 45%, 
+			rgba(0, 0, 0, 0.2) 55%, 
+			transparent 55%
+		), 
+		/*white base*/
+		linear-gradient(#9999BB,#9999BB);
+    background-size: 
+		7px 7px, /*thin stripes*/
+		cover; /*base white*/
+    margin:0 !important;
+}
+
+#sidebar {
+    height:100%;
+    max-width:275px;
+    width:30%;
+    background-color:rgba(0,0,0,.4);
+    padding:15px 25px;
+    
+}
