@@ -1,1 +1,9 @@
-<h1>Home Page</h1>
+
+
+<section id="sidebar">
+        
+        <h1>Bloc Chat</h1>
+        <div ng-repeat="(key, value) in chatRooms.rooms">
+            <p>{{ "Room " + key + ": " + value.$value }}</p>
+        </div>
+</section>
