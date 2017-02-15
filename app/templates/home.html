@@ -1,8 +1,12 @@
 
 
 <section id="sidebar">
-        
+    
         <h1>Bloc Chat</h1>
+        <button id="new-chat" class="btn btn-primary" ng-click="chatRooms.newChat()">New Chatroom</button>
+        
+        <div class="sidebar-divider"></div>
+    
         <div ng-repeat="(key, value) in chatRooms.rooms">
             <p>{{ "Room " + key + ": " + value.$value }}</p>
         </div>

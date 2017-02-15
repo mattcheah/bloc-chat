@@ -3,6 +3,10 @@
     font-family: sans-serif;
 }
 
+input {
+    color:black !important;
+}
+
 body {
     height: 100vh;
     background-image: 
@@ -29,4 +33,17 @@ body {
     background-color:rgba(0,0,0,.4);
     padding:15px 30px;
     box-sizing:border-box;
+}
+
+.sidebar-divider {
+    border-bottom: 2px solid white;
+    margin:20px auto;
+}
+
+.modal-content {
+    background-color: #38768e !important;
+}
+
+.modal-header, .modal-footer {
+    background: rgba(0,0,0,.3);
 }

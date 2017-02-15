@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Create New Chatroom</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <p>{{ modal.message }}</p>
+    <input type="text" placeholder="Name Your Chatroom" ng-model="modal.newName">
+    <br>
+    <p>New Room Name: <strong>{{ modal.newName }}</strong></p>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="modal.ok()">OK</button>
+    <button class="btn btn-warning" type="button" ng-click="modal.cancel()">Cancel</button>
+</div>
