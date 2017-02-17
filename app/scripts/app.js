@@ -9,14 +9,14 @@
             });
         $stateProvider
             .state('home', {
-                url: '/pages/',
+                url: '/pages/index.html',
                 templateUrl: '/templates/home.html',
                 //controller: 'ChatRoomsCtrl as chatrooms'
             });   
     }
     
     angular
-        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
+        .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap', 'ngCookies'])
         .config(config);
     
 })();

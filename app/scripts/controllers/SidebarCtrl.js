@@ -1,16 +1,15 @@
 (function() {
     
-    function SidebarCtrl(Room, $uibModal) {
+    function SidebarCtrl(Room, $uibModal, $cookies) {
         this.rooms = Room.all;
 
-        this.newChat = function (size, parentSelector) {
+        this.newChat = function () {
             var modalInstance = $uibModal.open({
               animation: false,
               ariaLabelledBy: 'modal-title',
               ariaDescribedBy: 'modal-body',
               templateUrl: '../templates/modalTemplate.html',
               controller: 'ModalCtrl as modal',
-              size: size,
               resolve: {
                 /*items: function () {
                   return $ctrl.items;
@@ -23,10 +22,28 @@
             });
         };
         
+        this.newName = function() {
+            var usernameModal = $uibModal.open({
+                animation: false,
+                ariaDescribedBy: 'modal-body',
+                ariaLabelledBy: 'modal-title',
+                templateUrl: '../templates/usernameModalTemplate.html',
+                controller: 'ModalCtrl as modal',
+                resolve: {
+                /*items: function () {
+                return $ctrl.items;
+                }*/
+                }
+           });
+           
+           usernameModal.result.then(function (selectedItem) {
+                $cookies.put('blocChatCurrentUser', selectedItem);
+            });
+        };
     }
     
     angular
         .module('blocChat')
-        .controller('SidebarCtrl', ["Room", "$uibModal",  SidebarCtrl]);
+        .controller('SidebarCtrl', ["Room", "$uibModal", '$cookies', SidebarCtrl]);
     
 })();

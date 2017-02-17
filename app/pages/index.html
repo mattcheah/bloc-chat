@@ -16,8 +16,13 @@
         <div class="sidebar-divider"></div>
     
         <div ng-repeat="(key, value) in sidebar.rooms">
-            <a class="chatroom-link"><div ng-click="chatrooms.getMessages(value.$id, value.$value)" >{{ "Room " + key + ": " + value.$value }}</div>
+                <a class="chatroom-link" ng-click="chatrooms.getMessages(value.$id, value.$value)">{{ "Room " + (key+1) + ": " + value.$value }}
             </a>
+        </div>
+        
+        <div id="bottom-username">
+            <p ng-show="chatrooms.currentUser">Signed in as: {{chatrooms.currentUser}}</p>
+            <button class="btn btn-info" ng-click="sidebar.newName()">Change User</button>
         </div>
         
         
@@ -29,6 +34,7 @@
     
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>
     <!-- AngularFire -->
     <script src="https://cdn.firebase.com/libs/angularfire/2.0.1/angularfire.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
@@ -51,6 +57,7 @@
     <script src="/scripts/controllers/ChatRoomsCtrl.js"></script>
     <script src="/scripts/controllers/SidebarCtrl.js"></script>
     <script src="/scripts/controllers/ModalCtrl.js"></script>
+    <script src="/scripts/BlocChatCookies.js"></script>
     
 </body>
 </html>
