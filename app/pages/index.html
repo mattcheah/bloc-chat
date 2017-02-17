@@ -31,7 +31,13 @@
     <main>
         <ui-view></ui-view>
     </main>
-    
+    <div id="send-box" ng-show="chatrooms.currentRoom">
+
+        <input type="text" ng-model="chatrooms.sendChat" placeholder="Type your Message Here" id="message-input" class="form-control">
+        
+        <div id="send-button" ng-click="chatrooms.sendMessage(chatrooms.sendChat)">Send</div>
+
+    </div>
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-cookies.js"></script>

@@ -110,3 +110,48 @@ main {
     font-size: 10px;
     color: #38769b;
 }
+
+#send-box {
+    position:fixed;
+    bottom:0px;
+    width:65%;
+    margin-left:35%;
+}
+#message-input {
+    width: 85%;
+    float: left;
+    height: 45px;
+    border-radius: 0px !important;
+}
+#send-button {
+    width:15%;
+    float:left;
+    padding:12px;
+    background: rgb(11,120,170); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(11,120,170,1) 0%, rgba(15,154,219,1) 50%, rgba(13,138,196,1) 51%, rgba(79,196,249,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(11,120,170,1) 0%,rgba(15,154,219,1) 50%,rgba(13,138,196,1) 51%,rgba(79,196,249,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(11,120,170,1) 0%,rgba(15,154,219,1) 50%,rgba(13,138,196,1) 51%,rgba(79,196,249,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0b78aa', endColorstr='#4fc4f9',GradientType=0 ); /* IE6-9 */
+
+    text-align:center;
+    border: 1px solid #d2e8ff;
+    border-radius: 0 7px 7px 0;
+    border-left: none;
+}
+
+#send-button:hover {
+    cursor:pointer;
+    box-shadow:inset 0px 0px 6px 0px white;
+}
+
+#send-button:active {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0f9adb+0,0b78aa+50,0b78aa+50,159cdb+51,0d8ac4+100 */
+    background: rgb(15,154,219); /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(79,196,249,1) 0%, rgba(13,138,196,1) 50%, rgba(15,154,219,1) 51%, rgba(11,120,170,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(79,196,249,1) 0%, rgba(13,138,196,1) 50%, rgba(15,154,219,1) 51%, rgba(11,120,170,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(79,196,249,1) 0%, rgba(13,138,196,1) 50%, rgba(15,154,219,1) 51%, rgba(11,120,170,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0f9adb', endColorstr='#0d8ac4',GradientType=0 ); /* IE6-9 */
+    cursor:pointer;
+    box-shadow:inset 0px 0px 6px 0px black;
+
+}

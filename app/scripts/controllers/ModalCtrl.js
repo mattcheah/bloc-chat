@@ -1,7 +1,6 @@
 (function(){
     
     function ModalCtrl($uibModalInstance) {
-        console.log("modal inside run");
         this.newName = "";
         this.roomMessage = "What would you like to name your new room?";
         this.userMessage = "What would you like your username to be?";

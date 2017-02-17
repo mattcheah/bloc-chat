@@ -2,9 +2,9 @@
    function BlocChatCookies($cookies, $uibModal) {
        
        var currentUser = $cookies.get('blocChatCurrentUser');
-       console.log(currentUser);
+
        if (!currentUser || currentUser === "") {
-        console.log("modal inside run");
+
            var usernameModal = $uibModal.open({
                 animation: false,
                 ariaDescribedBy: 'modal-body',
