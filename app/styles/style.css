@@ -28,16 +28,35 @@ body {
 
 #sidebar {
     height:100%;
-    max-width:275px;
     width:35%;
     background-color:rgba(0,0,0,.4);
     padding:15px 30px;
     box-sizing:border-box;
+    position:fixed;
+    left:0;
 }
 
 .sidebar-divider {
     border-bottom: 2px solid white;
     margin:20px auto;
+}
+
+.chatroom-link {
+    padding: 10px;
+    border-radius: 2px;
+    background-color: rgba(255,255,255,.1);
+    margin: 15px 0;
+    display:block;
+    cursor:pointer;
+}
+
+.chatroom-link:hover {
+    background-color: rgba(255,255,255,.2);
+    text-decoration:none;
+}
+
+.chatroom-link div{
+    color: White;
 }
 
 .modal-content {
@@ -46,4 +65,42 @@ body {
 
 .modal-header, .modal-footer {
     background: rgba(0,0,0,.3);
+}
+
+main {
+    height:100%;
+    padding:50px 20px;
+    margin-left:35%;
+}
+
+.message {
+    background-color: rgba(197, 220, 227, .8);
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #216785;
+    margin: 4px 0;
+}
+
+.message .username {
+    color:#205583;
+    font-weight:bold;
+}
+
+.message .content {
+    color:#324458;
+}
+
+.message-right {
+    float:right;
+    width:175px;
+}
+
+.message-left {
+    float:left;
+}
+
+.message-time {
+    margin: 0;
+    font-size: 10px;
+    color: #38769b;
 }

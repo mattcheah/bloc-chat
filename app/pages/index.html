@@ -7,10 +7,25 @@
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
-<body>
+<body ng-controller="ChatRoomsCtrl as chatrooms">
+    <section id="sidebar" ng-controller="SidebarCtrl as sidebar">
+    
+        <h1>Bloc Chat</h1>
+        <button id="new-chat" class="btn btn-primary" ng-click="sidebar.newChat()">New Chatroom</button>
+        
+        <div class="sidebar-divider"></div>
+    
+        <div ng-repeat="(key, value) in sidebar.rooms">
+            <a class="chatroom-link"><div ng-click="chatrooms.getMessages(value.$id, value.$value)" >{{ "Room " + key + ": " + value.$value }}</div>
+            </a>
+        </div>
+        
+        
+    </section>
 
-    <ui-view></ui-view>
-
+    <main>
+        <ui-view></ui-view>
+    </main>
     
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
@@ -32,7 +47,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
     <script src="/scripts/app.js"></script>
     <script src="/scripts/services/Room.js"></script>
+    <script src="/scripts/services/Messages.js"></script>
     <script src="/scripts/controllers/ChatRoomsCtrl.js"></script>
+    <script src="/scripts/controllers/SidebarCtrl.js"></script>
     <script src="/scripts/controllers/ModalCtrl.js"></script>
     
 </body>

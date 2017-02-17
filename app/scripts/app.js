@@ -9,9 +9,9 @@
             });
         $stateProvider
             .state('home', {
-                url: '/',
+                url: '/pages/',
                 templateUrl: '/templates/home.html',
-                controller: 'ChatRoomsCtrl as chatRooms'
+                //controller: 'ChatRoomsCtrl as chatrooms'
             });   
     }
     

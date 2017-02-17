@@ -1,32 +1,21 @@
 (function() {
     
-    function ChatRoomsCtrl(Room, $uibModal) {
-        this.rooms = Room.all;
-
-        this.newChat = function (size, parentSelector) {
-            var modalInstance = $uibModal.open({
-              animation: false,
-              ariaLabelledBy: 'modal-title',
-              ariaDescribedBy: 'modal-body',
-              templateUrl: 'templates/modalTemplate.html',
-              controller: 'ModalCtrl as modal',
-              size: size,
-              resolve: {
-                /*items: function () {
-                  return $ctrl.items;
-                }*/
-              }
-            });
-
-            modalInstance.result.then(function (selectedItem) {
-              Room.addRoom(selectedItem);
-            });
-        };
+    function ChatRoomsCtrl($uibModal, Messages) {
+        this.test ="testtest";
+        this.roomMessages = "Please Select a Chatroom from the Sidebar, or Create a New One!";
+        this.messagesObject = {};
         
+        this.getMessages = function(roomId, roomName) {
+            this.messagesObject = Messages.getByRoomId(roomId);
+            this.roomMessages = ("Currently in room: "+roomName);
+        }
+        
+        
+
     }
     
     angular
         .module("blocChat")
-        .controller("ChatRoomsCtrl", ["Room", "$uibModal",  ChatRoomsCtrl]);
+        .controller("ChatRoomsCtrl", ["$uibModal", 'Messages',  ChatRoomsCtrl]);
     
 })();
