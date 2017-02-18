@@ -1,30 +1,30 @@
 (function() {
-   function BlocChatCookies($cookies, $uibModal) {
+   function BlocChatCookies($cookies, $uibModal, AuthService) {
        
-       var currentUser = $cookies.get('blocChatCurrentUser');
+        var currentUser = $cookies.get('blocChatCurrentUser');
 
-       if (!currentUser || currentUser === "") {
+        if (!currentUser || currentUser === "") {
 
-           var usernameModal = $uibModal.open({
+            var usernameModal = $uibModal.open({
                 animation: false,
                 ariaDescribedBy: 'modal-body',
                 ariaLabelledBy: 'modal-title',
-                templateUrl: '../templates/usernameModalTemplate.html',
-                controller: 'ModalCtrl as modal',
+                templateUrl: '../templates/newAccountTemplate.html',
+                controller: 'NewUserModalCtrl as newUserModal',
                 resolve: {
                 /*items: function () {
                 return $ctrl.items;
                 }*/
                 }
-           });
-           
-           usernameModal.result.then(function (selectedItem) {
-                $cookies.put('blocChatCurrentUser', selectedItem);
             });
-       }
+
+            usernameModal.result.then(function () {
+                            
+            });
+        }
    } 
     
     angular
         .module('blocChat')
-        .run(['$cookies', '$uibModal', BlocChatCookies])
+        .run(['$cookies', '$uibModal', 'AuthService', BlocChatCookies])
 })();

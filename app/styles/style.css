@@ -79,6 +79,11 @@ main {
     margin-left:35%;
 }
 
+#messages-container {
+    overflow-y: scroll;
+    max-height: 72.6vh;
+}
+
 .message {
     background-color: rgba(197, 220, 227, .8);
     padding: 10px;

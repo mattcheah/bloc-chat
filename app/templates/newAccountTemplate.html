@@ -1,0 +1,19 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Create New Account</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <p>Please enter your email and a password</p>
+    <form>
+    <input type="text" placeholder="Enter Your Email Address" ng-model="newUserModal.email" required class="form-control">
+    <br>
+    <input type="password" placeholder="Enter Your Password" ng-model="newUserModal.password" required class="form-control">
+    <br>
+    <input type="password" placeholder="Confirm Your Password" ng-model="newUserModal.password2" required class="form-control">
+    </form>
+    <br>
+    <p ng-show="newUserModal.errorMessages">{{newUserModal.errorMessages}}</p>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="newUserModal.ok()">Create Account</button>
+    <button class="btn btn-warning" type="button" ng-click="newUserModal.cancel()">Cancel</button>
+</div>

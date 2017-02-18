@@ -1,0 +1,15 @@
+<div class="modal-header">
+    <h3 class="modal-title" id="modal-title">Sign In to your Chat Account</h3>
+</div>
+<div class="modal-body" id="modal-body">
+    <p>Please enter your email and password</p>
+    <input type="text" placeholder="Enter Your Email Address" ng-model="signInModal.email" required class="form-control">
+    <br>
+    <input type="password" placeholder="Enter Your Password" ng-model="signInModal.password" required class="form-control">
+    <br>
+    <p ng-show="signInModal.errorMessages">{{signInModal.errorMessages}}</p>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="signInModal.ok()">Sign In</button>
+    <button class="btn btn-warning" type="button" ng-click="signInModal.cancel()">Cancel</button>
+</div>
